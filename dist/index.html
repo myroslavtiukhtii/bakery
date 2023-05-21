@@ -6,19 +6,19 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20230520211727">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230521122748">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap&_v=20230520211727" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap&_v=20230521122748" rel="stylesheet">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap&_v=20230520211727" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap&_v=20230521122748" rel="stylesheet">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Ultra&display=swap&_v=20230520211727" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Ultra&display=swap&_v=20230521122748" rel="stylesheet">
 </head>
 
 <body>
@@ -39,7 +39,9 @@
 						</li>
 					</ul>
 				</nav>
-				<button class="header__btn">Contact</button>
+				<button class="header__btn" data-popup="#popup">
+					Contact
+				</button>
 				<div class="icon-menu">
 					<span></span>
 				</div>
@@ -605,7 +607,21 @@
 			</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20230520211727"></script>
+	<div id="popup" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<div class="popup__text">
+					<h3 class="popup__title">Enter your email</h3>
+					<form class="popup__form" action="files/sendmail/sendmail.php" method="POST">
+						<input type="text" name="form[email]" data-error="Error" placeholder="E-mail" class="input">
+						<button type="submit" class="button popup__btutton">Send</button>
+					</form>
+				</div>
+				<button data-close type="button" class="popup__close">Закрити</button>
+			</div>
+		</div>
+	</div>
+	<script src="js/app.min.js?_v=20230521122748"></script>
 </body>
 
 </html>
